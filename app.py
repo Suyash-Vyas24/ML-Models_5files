@@ -5,11 +5,11 @@ import joblib
 import numpy as np
 
 # Load the AI models we created
+# Note: These files must be in the same folder on GitHub
 range_model = joblib.load('ev_range_model.pkl')
 soh_model = joblib.load('ev_soh_model.pkl')
 
 app = FastAPI()
-CORS(app)
 
 # Allow the internet to talk to this code
 app.add_middleware(
